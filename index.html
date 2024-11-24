@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog. Cifrado Asimétrico</title>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+
+<!-- Encabezado del blog con enlace rapido a entradas -->
+<body>
+    <header>
+        <h1>Blog. Cifrado Asimétrico</h1>
+        <p><strong>Nombre:</strong> Juan Sebastian Alvarez Yaguara</p>
+        <p><strong>Curso:</strong> Seguridad en el Desarrollo de Software NRC-4812</p>
+        <p><strong>Corporación Universitaria Minuto de Dios</strong> Especialización en Desarrollo de Software</p>
+        <nav>
+            <a href="#entrada1">¿Qué es?</a>
+            <a href="#entrada2">Algoritmos</a>
+            <a href="#entrada3">Ventajas/Desventajas</a>
+            <a href="#entrada4">Casos de Uso</a>
+            <a href="#entrada5">Observaciones/Recomendaciones</a>
+        </nav>
+    </header>
+
+    <!--Las 5 entradas del ejercicio, organizadas en Secciones-->>
+    <main>
+        <!--Sección #1 -->
+        <section id="entrada1">
+            <h2>¿Qué es el criptosistema de clave pública?</h2>
+            <p>Los algoritmos asimétricos se llaman así porque en lugar de usar una sola clave (Como en el caso de las claves simétricas) para realizar la codificación y 
+                decodificación, se utilizan dos claves diferentes: una va a ser para cifrar y la otra para descifrar. Estas dos claves se encuentran asociadas matemáticamente (algoritmo),
+                cuya característica fundamental es que una clave no puede descifrar lo que ella misma cifra.Cuando se completa la generación de una clave asimétrica se define 
+                una clave de cifrado (Clave pública) y una clave de descifrado (Clave privada); la primera puede ser conocida por todo el mundo, pero,
+                del otro lado, es decir la clave privada o de descifrado se debe tener mucho cuidado y mantenerla oculta.
+            </p>
+            <figure>
+                <img src="claveasimetrica.png" alt="Ciclo de clave asimétrica">
+                <figcaption>Fuente: Imagen tomada de <a href="https://linuxbasico.com/tecnicas-cifrado-simetrico-asimetrico" target="_blank">https://linuxbasico.com/tecnicas-cifrado-simetrico-asimetrico</a></figcaption>
+            </figure>
+        </section>
+        <!--Sección #2 -->
+        <section id="entrada2">
+            <h2>¿Cómo funciona y cuáles son sus algoritmos representativos?</h2>
+            <p> Los algoritmos de cifrado asimétricos son considerados una parte fundamental de los criptosistemas modernos, ya que proporcionan una base para realizar comunicación segura,
+                garantizando así, protección de datos personales de accesos no autorizados. Dentro de los algoritmos más importantes o comúnmente utilizados se encuentran:
+            </p>
+            <ul>
+                <li>Rivest-Shamir-Adleman (RSA)</li>
+                <li>Criptografía de curva elíptica (ECC)</li>
+                <li>Algoritmo de firma digital (DSA)</li>
+            </ul>
+            <article>
+                <h3>Rivest-Shamir-Adleman (RSA)</h3>
+                <p>
+                    Se basa en la complejidad matemática de los números primos para generar pares de claves. Utiliza un par de claves pública y privada para el cifrado y descifrado, lo que lo hace adecuado para la transmisión segura de datos y firmas digitales.
+                    Este algoritmo hoy en día es fuertemente usado en protocolos de seguridad Web (HTTPS), firmas digitales, correos electrónicos seguros, mensajería segura, entre otras más funcionalidades.
+                </p>
+            </article>
+        
+            <article>
+                <h3>Criptografía de curva elíptica (ECC)</h3>
+                <p>
+                    La ECC es un método de cifrado asimétrico basado en las propiedades matemáticas de las curvas elípticas sobre campos finitos. Ofrece una seguridad sólida con longitudes de clave más cortas que otros algoritmos.
+                    ECC es utilizado hoy en día en aplicaciones móviles, transacciones seguras de pago y principalmente en el Internet de las Cosas (IoT), debido a que realiza cálculos más rápidos y se refleja en un menor consumo de energía.
+                </p>
+            </article>
+        
+            <article>
+                <h3>Algoritmo de firma digital (DSA)</h3>
+                <p>
+                    DSA se basa en el uso de la exponenciación modular y el problema del logaritmo discreto para generar firmas digitales, permitiendo así a organizaciones y particulares crear firmas digitales que garanticen la autenticidad e integridad de los mensajes o documentos.
+                    El DSA se utiliza a menudo en aplicaciones que requieren firma y verificación segura de documentos, incluida la distribución de software, transacciones financieras y sistemas de votación electrónica.
+                </p>
+            </article>
+        </section>
+        <!--Sección #3 -->
+        <section id="entrada3">
+            <h2>Ventajas, desventajas y diferencias con el criptosistema simétrico</h2>
+            <p>El criptosistema asimétrico y la principal diferencia con el criptosistema simétrico es por el uso de 2 llaves (1 pública y 1 privada) en vez de una (privada) como sucede con el criptosistema geométrico
+               a continuación se presenta la siguiente tabla con ventajas y desventajas del criptosistema asimétrico:
+            </p>
+
+            <table border="1">
+                <caption>Ventajas y Desventajas de criptosistema asimétrico vs criptosistema simétrico</caption> 
+                <thead>
+                    <tr>
+                        <th>Ventajas</th>
+                        <th>Desventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Los datos solo se pueden descifrar usando la clave privada, que está en poder del titular, facilita la distribución segura de claves en entornos en línea</td>
+                        <td>Puede ser más lento que otros métodos criptográficos</td>
+                    </tr>
+                    <tr>
+                        <td>Garantiza la confidencialidad de la información al utilizar la clave privada para descifrar mensajes y en caso de pérdida de clave no se ve comprometida la información</td>
+                        <td>En situaciones de cifrado masivo, como el cifrado de grandes volúmenes de datos, el cifrado asimétrico podría ser menos eficiente que el simétrico</td>
+                    </tr>
+                    <tr>
+                        <td>Es eficaz para sistemas con un gran número de usuarios, ya que cada entidad puede tener su par de claves</td>
+                        <td>Las operaciones matemáticas complejas asociadas con el cifrado asimétrico pueden requerir más recursos computacionales. algunos métodos simétricos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <!--Sección #4 -->
+        <section id="entrada4">
+            <h2>Caso práctico de aplicación </h2>
+            <p>Un Caso práctico donde se ve aplicado el cifrado asimétrico de los datos es sin duda en la navegación por internet en sitios que utilizan el protocolo HTTPS, ya que este protocolo
+               funciona enviando una clave pública que viene dentro de un certificado SSL/TLS, esta clave pública se usa para el cifrado de la información que se envía desde nuestro navegador hasta
+               el servidor de la página, como esta clave pública se utiliza para cifrar, el servidor tiene por consiguiente la clave privada para poder descifrar los datos, manteniendo así una comunicación
+               segura al momento de navegar por páginas web, en especial aquellas que pueden manejar información sensible del usuario (Como cuando se realiza transferencias bancarias, compras en linea,
+               información sensible del usuario, entre otros).
+            </p>
+            <figure>
+                <img src="ssl.png" alt="Uso de clave asimetrica en navegación con certificado SSL">
+                <figcaption>Fuente: Imagen tomada de <a href="https://acerkate.com/que-es-y-para-que-sirve-un-certificado-ssl/" target="_blank">https://acerkate.com/que-es-y-para-que-sirve-un-certificado-ssl/</a></figcaption>
+            </figure>
+        </section>
+
+        <!--Sección #5 -->
+        <section id="entrada5">
+            <h2>Observaciones y recomendaciones para implementar el criptosistema</h2>
+            <p>Las observaciones y recomendaciones para la implementación del criptosistema asimétrico se pueden basar en los siguientes puntos a tener en cuenta:</p>
+            <ul>
+                <li>Elección apropiada del algoritmo asimétrico a utilizar dependiendo de las necesidades que se busca con el cifrado, tener claro que cada algoritmo tiene una longitud de clave mínima.</li>
+                <li>Siendo consecuente con la elección del algoritmo y su longitud de clave se debe estimar que si bien las claves mas largas aumentan la seguridad, consumen a su vez mayores recursos</li>
+                <li>La gestión de la clave privada debe ser primordial por lo que debe ser almacenada de manera segura y nunca ser expuesta o compartida, por eso es frecuente ver sitios Web que nos piden como usuarios generar contraseñas fuertes usando Mayúsculas, números y caracteres especiales</li>
+            </ul>
+        </section>
+        <!--Bibliografía -->
+        <section id="bibliografia">
+            <h2>Bibliografía</h2>
+            <ul>
+                <li>
+                    Mendoza, Julio. (2008). Demostración de cifrado simétrico y asimétrico. Ingenius: Revista de Ciencia y Tecnología. págs. 46-53.
+                </li>
+                <li>
+                    IBM. (2024). ¿Qué es el cifrado asimétrico?. Obtenido de IBM:  
+                    <a href="https://www.ibm.com/es-es/think/topics/asymmetric-encryption" target="_blank">https://www.ibm.com/es-es/think/topics/asymmetric-encryption</a>
+                </li>
+                <li>
+                    CEUPE. (2023). Cifrado asimétrico: Qué es, ventajas, y funcionamiento. Obtenido de CEUPE:  
+                    <a href="https://www.ceupe.com/blog/cifrado-asimetrico.html" target="_blank">https://www.ceupe.com/blog/cifrado-asimetrico.html/</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <p> 2024 - Juan Sebastian Alvarez Yaguara - Especialización Desarrollo de Software - Corporación Universitaria Minuto de Dios</p>
+    </footer>
+</body>
+</html>

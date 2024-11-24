@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+#bibliografia {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#bibliografia h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#bibliografia ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#bibliografia li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#bibliografia a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#bibliografia a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    text-align: center; /* Centra la imagen y el pie de imagen */
+    margin: 20px auto;
+    max-width: 600px; /* Limita el ancho máximo de la imagen */
+}
+
+figure img {
+    width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción */
+    border: 1px solid #ddd; /* Agrega un borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+figure figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555; /* Color de texto más tenue */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center; /* Alineación del texto */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color alterno para las filas */
+}
+
+tr:hover {
+    background-color: #ddd; /* Color al pasar el ratón sobre la fila */
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
